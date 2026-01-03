@@ -1,0 +1,1 @@
+{"name":"statik-landing","private":true,"dependencies":{"@vercel/node":"^3.0.0"},"devDependencies":{"typescript":"^5.0.0","@types/node":"^20.0.0"}}
