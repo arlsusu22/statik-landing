@@ -21,11 +21,6 @@
             background-size: 20px 20px;
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
-
-        /* Simple Modal Animation */
-        #privacy-modal { transition: opacity 0.3s ease; }
-        .hidden-modal { opacity: 0; pointer-events: none; }
-        .visible-modal { opacity: 1; pointer-events: auto; }
     </style>
 </head>
 <body class="bg-checkered text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
@@ -57,69 +52,11 @@
         </div>
 
         <div class="mt-16 flex gap-6 text-xs text-gray-400">
-            <button onclick="openModal()" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Privacy Policy</button>
+            <a href="/privacy.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Privacy Policy</a>
             <a href="mailto:support@appstatik.com" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Support</a>
         </div>
 
     </main>
 
-    <div id="privacy-modal" class="hidden-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4 backdrop-blur-sm">
-        <div class="bg-gray-900 border border-gray-700 rounded-2xl p-6 md:p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl relative">
-            
-            <div class="flex justify-between items-center mb-6 sticky top-0 bg-gray-900 pb-4 border-b border-gray-800">
-                <h2 class="text-2xl font-bold text-white">Privacy Policy</h2>
-                <button onclick="closeModal()" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
-            </div>
-            
-            <div class="prose prose-invert text-gray-300 text-sm leading-relaxed space-y-4 text-left">
-                <p><strong>Last Updated: December 2025</strong></p>
-                
-                <p><strong>1. Introduction</strong><br>
-                Statik ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how our mobile application uses your data when you connect it with the Strava platform.</p>
-                
-                <p><strong>2. Data Collection and Usage</strong><br>
-                Statik uses the Strava API to retrieve your activity data (maps, distance, time) solely for the purpose of generating visual overlays on your device. 
-                <br><br>
-                We <strong>do not</strong> permanently store your Strava activity data on our servers. All data processing happens temporarily to generate the image you requested.</p>
-                
-                <p><strong>3. Third-Party Sharing</strong><br>
-                We do not share, sell, or rent your personal data to third parties. Your data remains strictly between Strava and your device.</p>
-                
-                <p><strong>4. User Consent & Permissions</strong><br>
-                By connecting your Strava account, you grant Statik permission to access activity data required for visualization. You retain full control over which data is shared via the Strava authentication screen (e.g., Public vs. Private activities). Statik only processes data you have explicitly authorized us to view.</p>
-                
-                <p><strong>5. Contact Us</strong><br>
-                If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:support@appstatik.com" class="text-blue-400 hover:text-blue-300">support@appstatik.com</a></p>
-            </div>
-
-            <div class="mt-8 pt-6 border-t border-gray-800 text-center">
-                <button onclick="closeModal()" class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors">
-                    Close
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openModal() {
-            const modal = document.getElementById('privacy-modal');
-            modal.classList.remove('hidden-modal');
-            modal.classList.add('visible-modal');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling background
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('privacy-modal');
-            modal.classList.remove('visible-modal');
-            modal.classList.add('hidden-modal');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Close modal if clicking outside content
-        document.getElementById('privacy-modal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
 </body>
-
 </html>
