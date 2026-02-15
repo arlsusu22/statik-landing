@@ -10,7 +10,7 @@
         body { font-family: 'Inter', sans-serif; }
         .glitch-font { font-family: 'Londrina Shadow', cursive; }
         
-        /* The "Checkered" Background Pattern (Photoshop Transparency Look) */
+        /* Checkered background pattern */
         .bg-checkered {
             background-color: #1a1a1a;
             background-image: 
@@ -25,39 +25,54 @@
 </head>
 <body class="bg-checkered text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
 
+    <!-- dark overlay -->
     <div class="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
 
     <main class="z-10 flex flex-col items-center text-center px-6 max-w-lg w-full">
         
+        <!-- Logo -->
         <h1 class="glitch-font text-7xl md:text-9xl mb-2 tracking-wide text-white drop-shadow-[4px_4px_0_rgba(255,0,0,0.8)]">
             statik.
         </h1>
 
+        <!-- Tagline -->
         <p class="text-xl md:text-2xl font-light text-gray-200 mt-4 mb-10 drop-shadow-md">
             Visualize your Effort.<br>
             <span class="text-gray-400 text-base">Instant overlays for your Strava stats.</span>
         </p>
 
+        <!-- App Store button -->
         <div class="flex flex-col w-full gap-4">
             
-            <button disabled class="flex items-center justify-center gap-3 bg-white text-black font-bold py-4 px-6 rounded-xl opacity-70 cursor-not-allowed w-full shadow-lg hover:opacity-70">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.45-1.1 3.96-1.1 2.44.11 3.75 1.59 4.39 2.5-3.3 1.94-2.58 6.64.9 7.9-1.34 2.87-3.08 4.7-4.33 2.93zm-5.46-16.7c.97-.99 1.97-1.63 3.32-1.58.12 1.49-.61 2.89-1.45 3.86-.94 1.15-2.4 1.6-3.48 1.48-.19-1.47.66-2.73 1.61-3.76z"/></svg>
-                <span>Coming Soon to App Store</span>
-            </button>
+            <a href="https://apps.apple.com/us/app/statik-activity-overlays/id6757446824" target="_blank" 
+               class="flex items-center justify-center gap-3 bg-white text-black font-bold py-4 px-6 rounded-xl w-full shadow-lg hover:bg-gray-200 transition-colors">
+                
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.45-1.1 3.96-1.1 2.44.11 3.75 1.59 4.39 2.5-3.3 1.94-2.58 6.64.9 7.9-1.34 2.87-3.08 4.7-4.33 2.93zm-5.46-16.7c.97-.99 1.97-1.63 3.32-1.58.12 1.49-.61 2.89-1.45 3.86-.94 1.15-2.4 1.6-3.48 1.48-.19-1.47.66-2.73 1.61-3.76z"/>
+                </svg>
+
+                <span>Download on the App Store</span>
+
+            </a>
+
+            <p class="text-sm text-gray-400 mt-1">Now available for iPhone</p>
 
         </div>
 
+        <!-- Footer links -->
         <div class="mt-16 flex gap-6 text-xs text-gray-400">
-            <a href="/privacy.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Privacy Policy</a>
-            <a href="/terms.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Terms of Service</a>
-            <a href="/support.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">Support</a>
+            <a href="/privacy.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Privacy Policy
+            </a>
+            <a href="/terms.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Terms of Service
+            </a>
+            <a href="/support.html" target="_blank" class="hover:text-white transition-colors underline decoration-dotted underline-offset-4">
+                Support
+            </a>
         </div>
 
     </main>
 
 </body>
 </html>
-
-
-
-
